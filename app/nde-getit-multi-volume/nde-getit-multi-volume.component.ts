@@ -1,6 +1,6 @@
 //this component add the list of related title under the location section and hide the library locations for multi volume works
-//aggiunge la lista delle opere in più volumi solo a queste condizioni: diplay.type dell'opera è "book", 
-//ha non nullo il campo "OpSup" (opera superiore) e nei titoli correlati c'è "contains"
+//only at this satisfied conditions: work diplay.type is "book", 
+//field "OpSup" (opera superiore) is not null and related titles has "contains" term.
 import { Component, Input, NgZone, ChangeDetectorRef, Renderer2, ElementRef } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { combineLatest, Subject } from 'rxjs';
