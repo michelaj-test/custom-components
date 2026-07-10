@@ -1,0 +1,38 @@
+#Study_room_link .icon img {
+  object-fit: contain;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* ridimensionare header, prova Missana 17_07_2025 */
+@media (min-width: 1280px) {  
+.container .top-bar div[_ngcontent-ng-c3567112255] {
+   width: clamp(1000px, 100%, 1900px) !important;
+ }
+}
+
+/*prove su background image in homepage - Gibertoni 20270724*/
+
+.top-bar-background-image {
+  position: relative !important;
+  background: url('./custom/39UMI_INST-VU_NDE_ELISA/assets/homepage/homepage_background.svg') center/cover no-repeat !important;
+  height: 400px !important;
+  filter: brightness(0.9) saturate(0.85);
+}
+ 
+.top-bar-background-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(200, 200, 200, 0.3); /* overlay grigio chiaro più presente */
+  pointer-events: none;
+  z-index: 0;
+}
+ 
+.top-bar-background-image > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* fine prove su background image in homepage - Gibertoni 20270724*/
+
+

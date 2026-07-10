@@ -1,0 +1,34 @@
+<div class="cdk-overlay-container"><div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing">
+</div><div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
+<div id="cdk-overlay-4" class="cdk-overlay-pane mat-mdc-dialog-panel" style="position: static;">
+<div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+<div class="mat-mdc-dialog-inner-container mdc-dialog__container">
+<div class="mat-mdc-dialog-surface mdc-dialog__surface">
+<div class="flex-row flex-layout-space-between dialog-padding-space permalink-header">
+<h4 class="mat-title-medium text-uppercase">Permalink</h4>
+<mat-dialog-actions class="custom-close-button">
+<button mat-icon-button mat-dialog-close aria-label="Close"> 
+        <mat-icon role="img" class="mat-icon notranslate grey-icon-color mat-icon-no-color ng-star-inserted" aria-hidden="true" data-mat-icon-type="svg" data-mat-icon-name="Close-dialog"><svg height="100%" viewBox="0 -960 960 960" width="100%" fit="" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path></svg></mat-icon>
+    </button> <!----></mat-dialog-actions></div>
+<mat-divider _ngcontent-ng-c1742074232="" role="separator" class="mat-divider nde-divider mat-divider-horizontal" aria-orientation="horizontal">
+</mat-divider>
+<div class="copy-to-clipboard-cont flex-row flex-layout-space-end permalink-container-custom">
+<div class="ng-star-inserted"> {{ data.permalink }}</div>
+<button mat-icon-button
+        (click)="copyPermalink()"
+        [matTooltip]="tooltipLabel"
+        [attr.aria-label]="ariaLabel">
+  <mat-icon *ngIf="!copied">content_copy</mat-icon>
+  <div *ngIf="copied" class="mat-icon">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+        <path d="M0.5 13.1563L6.27032 18.9266L7.72581 17.4608L1.96581 11.7008M23.0342 5.07373L12.1129 16.0053L7.81871 11.7008L6.34258 13.1563L12.1129 18.9266L24.5 6.53954M18.6574 6.53954L17.2019 5.07373L10.6471 11.6286L12.1129 13.0841L18.6574 6.53954Z" fill="var(--sys-primary)"></path>
+    </svg>
+</div>
+</button>
+
+
+<span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
+<!----><!----><!----><!----><!----><!----></div><!----><!----></div></div>
+
+<div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true">
+</div></div></div></div>

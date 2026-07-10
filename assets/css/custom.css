@@ -1,0 +1,605 @@
+/* 1)opere in più volumi: NON toccare i blocchi service/azioni: devono restare visibili */
+  .nde-location-item-service,
+  .nde-location-item-actions {
+    display: block !important; /* visibili */
+  }
+   
+/* 2)opere in più volumi: Nascondi la lista locations solo quando il flag è presente sul parent */
+
+nde-get-it.hide-locations nde-locations-container,
+nde-get-it.hide-locations .getit-locations-filter-bar,
+nde-get-it.hide-locations .related-titles-list {
+  display: none !important;
+}
+/* Nascondi scorri virtualmente per mobile */
+@media (max-width: 600px) {
+  #brief\.results\.tabs\.browseshelf {
+    display: none !important;
+  }
+}
+
+/* (Opzionale ma consigliato) Forza a mostrarsi da 601px in su */
+@media (min-width: 601px) {
+  #brief\.results\.tabs\.browseshelf {
+    display: block !important;
+  }
+}
+
+/* prove barra header */
+.header-custom {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: white;
+    background-color: #003366;
+	/* disposizione orizzontale */   
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+/* Contenitore allineato a header e main */
+.header-custom-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px 1rem;
+  justify-content: space-between; /* sinistra e destra */
+  align-items: center; /* centrati verticalmente */
+  display: flex;
+  gap: 2rem;
+}
+
+
+ 
+.header-link-unimi {
+    color: #ffffff;
+    text-decoration: none;
+	flex-shrink: 0; 
+	display: inline-block !important;
+}
+.header-custom-container a {
+    color: white;
+	display: inline;
+	text-decoration:none;
+}
+.header-custom-container a:hover {
+	text-decoration:underline;
+}
+.header-link-biblio ul {
+    list-style: none;  /* toglie i pallini */
+    margin: 0;
+    padding: 0;
+	flex-shrink: 0;
+    display: flex;     /* li mette in orizzontale */
+    gap: 1rem;         /* spazio tra i link */
+}
+/* aggiungo separtore verticale */
+.header-link-biblio ul li {
+  display: flex;
+  align-items: center;
+}
+
+/* linea verticale tra gli elementi */
+.header-link-biblio ul li:not(:first-child)::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 1rem;           /* regola altezza */
+  background-color: white;
+  margin-right: 1rem;     /* spazio tra linea e testo */
+}
+
+
+/* Stessa regola di header bar e main */
+@media (min-width: 1280px) {
+  .header-custom-container {
+    width: clamp(1088px, 85%, 1368px);
+  }
+}
+
+@media (max-width: 600px) {
+
+  .header-link-biblio {
+
+    display: none;  /* nasconde i link biblio nella header */
+
+	}
+
+} 
+ /* fine prova barra header*/
+ 
+ /*istruzione inserita per estendere il box con avvisi in homepage a tutto schermo */
+ .main-landing-page .welcome-announcements-container .announcements {
+	 max-width:unset !important;
+	 }
+ 
+/* allineare permalink alle altre opzioni */
+ @media (min-width: 960px) {
+nde-record-actions {
+    display: flex;
+    align-items: center;
+    /* Rimuovi eventuali margin o padding indesiderati che potrebbero separare il tuo elemento dagli altri */
+    padding: 0;
+    margin: 0;
+	}
+}
+/* Selettore mirato al tuo bottone permalink all'interno del suo componente wrapper */
+nde-record-actions-top-from-remote-0 .mat-mdc-menu-item .mat-icon {
+    /* Azzeriamo il margine destro per unire il bottone agli altri */
+    margin-right: 0 !important; 
+    
+    /* Opzionale: se hai bisogno di un piccolo spazio tra permalink e il blocco successivo, 
+       imposta un valore molto piccolo, ad esempio 4px.
+       Se non funziona con l'icona, prova ad applicare il margin sul suo contenitore:
+       margin-right: 4px;
+    */
+}
+/* bordi grigi di location item */
+.not-grouped-by-library[_ngcontent-ng-c903880169] {
+    border: 2px solid #c9c9c9 !important;
+}
+
+
+/* Nasconde il componente permalink quando è nel container della top bar */
+#resultsTopBarContainer nde-record-actions-top-from-remote-0 {
+  display: none !important;
+}
+
+#Study_room_link .icon img {
+  object-fit: contain;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/*modifica colori di sistema */ 
+:root {
+--sys-primary: #003366;		/*modifico il color theme con blu sba */
+--sys-background:#ffffff;  	/*con questa modifica coloro sfondo dei box di ricerca */
+--border:#003366;			/* modifico colore dei bordi del box di ricerca. L'originale era --border: "#C9C9C9" */
+}
+
+
+/* per rimuovere lo sfondo colorato applicato da Exlibris all'immagine di background nella landing page bisogna inserire 
+.custom-search-bar-container .background-overlay {
+display: none; */
+.custom-search-bar-container .background-overlay {
+/*display: none; */
+background-color: #253e5c61 !important; /*modificato il colore dello sfondo di background all'immagine nella landing page */
+
+}
+
+/* inserisco colore di fondo al pulsante della ricerca avanzata e coloro di blu unimi la scritta */
+
+.top-bar-container .advanced-search-button {
+	background-color: var(--sys-background);
+}
+.top-bar-container  .mdc-button__label {
+color:var(--sys-primary);
+}
+/* coloro di blu l'icona della ricerca "Poni qualsiasi domanda"  */
+.custom-search-bar-container .mat-icon.fill-white svg path {
+    fill: #003366;
+    stroke: none;
+}
+/*cerchio di blu le icone della ricerca "Poni qualsiasi domanda" e della ricerca avanzata nella pagina dei risultati */
+.search-bar-container .advanced-search-button {
+    border: 1px solid var(--border);
+}
+
+/* modifica altezza immagine sba  */
+
+nde-logo img.black-background {
+  height: 45px !important; /* modifica altezza qui */
+  max-height: 35px !important;
+  margin: 0 0;
+}
+
+/*rimuovo immagine dal container del box di ricerca (in cerca banche dati e cerca riviste)e inserisco uno sfondo grigio #f1f0f4 */
+
+.search-container .general-search-header-background {
+ background-color: #f1f0f4;
+ background-image: none !important;
+}
+
+
+/*modifica colore scritta "Cerca una banca dati" e "Cerca una rivista" in general-search-header  */
+.general-search-header .title{
+  color: #003366; 
+}
+
+h1.title.mat-title-large {
+    color: #003366;
+}
+
+
+/*non visualizzare immagine e testo nel database-homepage-container della ricerca banche dati*/
+
+.database-homepage-container .title-icon-container {
+    display: none;
+}
+
+/* non visualizzare immagine e testo nel journal-homepage-container della ricerca journals */
+
+.journal-homepage-container .title-icon-container {
+    display: none;
+}
+
+/* non visualizzare immagine e testo in nde-browse-search-container della ricerca per lista */
+nde-browse-search-container .title-icon-container {
+    display: none;
+}
+
+/* INIZIO non visualizzare immagine e testo in nessun record trovato */
+.did-you-mean-container .mat-icon {
+    display: none;
+}
+.no-record-found {
+    display: none;
+}
+/* FINE non visualizzare immagine e testo in nessun record trovato */
+
+:root {
+
+--mat-tree-node-text-color: #003366 ; /*per cambiare colore ai cerchi in attesa del caricamento della landing page  */
+}
+
+/* Seleziona i cerchietti dentro mat-dialog-container  - i colori sono indicati diversi ma recepisce solamente il primo. vanno però lasciate le indicazioni dei 4 cerchietti altrimenti non funziona*/
+.mat-dialog-container path:nth-of-type(1) {
+  fill: #003366; /* blu base */
+}
+.mat-dialog-container path:nth-of-type(2) {
+  fill: #004080; /* blu medio */
+}
+.mat-dialog-container path:nth-of-type(3) {
+  fill: #0059b3; /* blu brillante */
+}
+.mat-dialog-container path:nth-of-type(4) {
+  fill: #3399cc; /* blu chiaro */
+}
+
+
+/* prova inserimento nuova immagine (SBA) accanto al logo Minerva */
+/* Desktop (>= 601px): dimensioni allineate al logo Minerva */
+/* 2 loghi sba in 2 posizioni diverse, */
+/* viene visualizzato solo uno dei 2 a seconda che sia mobile o desktop */
+.custom-injected-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 auto;
+  order: unset;
+  margin-right: 10px;
+}
+
+/* Immagine stessa altezza del logo esistente */
+.custom-injected-logo img {
+  height: 45px;
+  vertical-align: middle;
+}
+
+
+@media (min-width: 601px) {
+  .sba-desktop { display: flex; }
+  .sba-mobile { display: none; }
+  .custom-injected-logo img {
+	height: 45px;
+	vertical-align: middle;
+	}
+}
+
+/* Mobile: mostra solo il logo mobile */
+@media (max-width: 600px) {
+  .sba-desktop { display: none; }
+  .sba-mobile { 
+	display: flex; 
+	padding-left: 1rem;
+  }
+  .custom-injected-logo img {
+	height: 30px;
+	vertical-align: middle;
+	
+	}
+  nde-main-menu {
+    order: 1 !important;
+
+  }
+
+  /* Logo SBA secondo */
+  .sba-mobile{
+    order: 2 !important;
+  }
+
+  /* Logo Minerva terzo */
+  nde-logo {
+    order: 3 !important;
+  }
+
+  /* User panel ultimo */
+  nde-user-panel {
+    order: 4 !important;
+  }
+
+}
+
+/* bordo blu su box about in landing page (vanno rivisti i bordi stondati dell'immagine) */
+.main-landing-page {
+    .about {
+        border-width: 0.0925rem;
+        border-style: solid;
+        border-color: #003366;
+        border-image: initial;
+    }
+	}
+	
+/* togliere l'angolo smussato dell'immagine del box "about" nella landing page  altrimenti rimane angolo bianco quando riquadro di blu il box about nella landing page --> l'ho inserito in homepage.css */
+.main-landing-page .about .about-content .about-image img {
+	   	    /* border-radius: 0 .625rem .625rem 0;  /*questo era il codice originale per smussare i due angoli a destra dell'immagine */
+		border-radius: 0;
+}
+
+
+/*modifica del colore di background del pulsante di ricerca (con lente ingrandimento) in homepage */
+.search-bar-actions .search-btn,  .search-bar-actions .clear-search-btn {
+    background-color: var(--sys-primary);
+}
+/*modifica del colore di background del pulsante di ricerca vocale (con microfono) in homepage  */
+button[data-qa="voice-search-btn"] {
+    background-color: var(--sys-primary) !important;
+}
+
+/*modifica colore icona microfono, bisogna interenire sul path perchè il colore è inserito lì dentro e non basta mettere solo svg*/
+button[data-qa="voice-search-btn"] svg path {
+    fill: #ffffff !important;
+}
+
+/* coloro di bianco SOLO la lente della search bar e la X per la cancellazione del testo digitato. Attenzione: se non specifico data-mat-icon-name="Search" mi colora di bianco anche la freccia arrow nello scope di ricerca e quindi non si visualizza più */
+.search-bar-actions mat-icon[data-mat-icon-name="Search"] svg,
+.search-bar-actions mat-icon[data-mat-icon-name="Close"] svg{
+  fill: #ffffff !important;
+}
+
+
+/*modifica del colore di background del pulsante di ricerca (con lente ingrandimento) nelle collezioni */
+.collection-discovery-search-bar .search-form .search-bar-actions .clear-search-btn, .collection-discovery-search-bar .search-form .search-bar-actions .submit-search-btn{
+
+    background-color: var(--sys-primary);
+}
+
+/*elimino il separatore (divider) tra i pulsanti di ricerca (lente ingrandimento) e cancellazione testo inserito (X) sia nella barra di ricerca in homepage sia nella barra di ricerca nelle collezioni */
+.search-bar-actions .mat-divider.nde-divider.mat-divider-vertical {
+    display: none;
+}
+
+.collection-discovery-search-bar .search-form .divider {
+     display: none;
+}
+
+/*collection discovery header (dove c’è scritta Collezioni…)  - NON FUNZIONA 
+nde-collection-discovery-lobby-header .collection-discovery-header {
+	background: none !important;
+	background-color: #f1f0f4 !important;
+}
+*/
+
+
+/*modifico il colore della scritta Collezioni  --L?HO INSERITO IN CUSTOM.JS qui non funziona
+/*.nde-collection-discovery-container 
+ nde-collection-discovery-lobby-header .collection-discovery-header .collection-discovery-header-title {
+    color: #003366 !important;
+}
+
+/*
+
+/*.collection-discovery-gallery-container 
+.search-container .collection-discovery-search-bar {
+     background-color: var(--sys-background) !important;
+}*/
+
+
+ 
+ nde-collection-discovery-item-thumbnail .grid-thumbnail-container img {
+    object-fit: contain !important;
+	outline: 1px solid var(--border);
+    height: 100%;
+}
+
+
+/*.collection-discovery-header .background-image {
+    
+    opacity: .5 !important;
+}
+*/
+/*.search-container .background-image {
+  opacity: 0.5 !important;
+}
+*/
+
+/* ======EG: 20260211 PULSANTE BIBLIOHELP - CSS BASE (c'è una parte importante anche nel file custom.js====== */
+#helpdesk-vertical {
+    position: fixed !important;
+    top: calc(70vh - 80px) !important; /* sotto metà schermo */
+    right: 0 !important;
+    transform: none !important;
+    z-index: 99999 !important;
+    margin-bottom: env(safe-area-inset-bottom);
+    width: 36px !important; /*36 è la misura dell'immagine bibliohelp.png */
+    height: 239px !important;  /*239 è la misura dell'immagine bibliohelp.png */
+    background-color:  #d01616 !important  /*prima avevo messo #d22128 !important; ma #d01616 è il colore dell'immagine bibliohelp.png */
+	border-radius: 6px !important; /*adeguo al pulsante assistenza ricerca */
+    /* border-radius: 8px 0 0 8px !important; /*se voglio il pulsante con lato sinistro arrotondato, lato destro squadrato. la regola è alto-sinistra | alto-destra | basso-destra | basso-sinistra */
+    display: flex !important;
+    align-items: center !important;
+	flex-direction: column !important;
+   /* justify-content: center !important; */
+   justify-content: flex-start !important; 
+    cursor: pointer !important;
+    /*box-shadow: 0 4px 6px rgba(0,0,0,0.3) !important; */
+}
+
+#helpdesk-vertical .helpdesk-img {
+    
+    object-fit: contain !important;
+    display: block !important;
+	
+}
+
+
+
+
+/* ====== VERSIONE MOBILE ====== */
+/*@media (max-width: 767px) {
+    #helpdesk-vertical {
+        top: calc(80vh - 60px) !important; /* più in basso su mobile 
+        width: 40px !important;
+        height: 120px !important;
+    }
+
+    #helpdesk-vertical .vertical-text {
+        font-size: 18px !important;
+    }
+}*/
+@media (max-width: 991.98px) {
+    #helpdesk-vertical .helpdesk-img {
+        transform: rotate(90deg);
+		position: fixed;   /* Blocca l'immagine sullo schermo */
+		bottom: 10px;      /* Distanza dal bordo inferiore dello schermo */
+		left: 50%;         /* Sposta il lato sinistro al centro */ 
+		max-width: 90%;    /* Impedisce all'immagine di uscire dagli schermi piccoli */
+		height: auto;      /* Mantiene le proporzioni corrette senza deformarla */
+		
+
+    }
+}
+
+/* ====== Form request: nasconde il campo "tipo di richiesta" ====== */
+formly-field[data-qa="almaRequest.requestType"] {
+display: none;
+}
+
+/* Rende sempre visibile il "triangolo" personalizzato che sostituisce i ... nella versione mobile
+mat-icon[data-mat-icon-namespace="39UMI_INST-VU_NDE_ELISA"][data-mat-icon-name="more"] {
+  color: var(--nde-icon-color, currentColor) !important;
+}
+*/
+
+/*Rotazione testo del pulsante "Assistente alla ricerca" e relativa icona per direzionarlo come scritta di BiblioHELP */
+
+/* RUOTA SOLO IL TESTO */
+span[translate="mainmenu.label.researchAssistant"] {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+/* (Facoltativo) Forza la sovrascrittura se Angular isola lo stile 
+::ng-deep mat-icon[data-mat-icon-name="research-assistant"] svg {
+  transform: rotate(180deg); 
+}
+*/
+ 
+ 
+ /*prove colore per pulsante "Assistenza alla ricerca" */
+ /* --- BOTTONE CON GRADIENTE #003366 → #004080 --- */
+
+.research-assistant-side-button {
+  background: linear-gradient(135deg, #003366, #004080) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* distanza icona-testo */
+  padding: 8px 12px !important;
+  transition: background 0.25s ease;
+}
+
+/* Hover (scurito per effetto profondità) */
+.research-assistant-side-button:hover {
+  background: linear-gradient(135deg, #002f59, #003b73) !important;
+}
+
+/* Active/Click (ancora più scuro) */
+.research-assistant-side-button:active {
+  background: linear-gradient(135deg, #00284d, #00325f) !important;
+}
+
+/* Mantieni l’icona bianca */
+.research-assistant-side-button mat-icon,
+.research-assistant-side-button mat-icon svg {
+  fill: white !important;
+  color: white !important;
+}
+
+/* Testo bianco */
+.research-assistant-side-button span[translate="mainmenu.label.researchAssistant"] {
+  color: white !important;
+}
+
+ /*fine prove colore per pulsante "Assistenza alla ricerca" */
+ 
+ /*rendi invisibile il link a destra "Espandi opzioni di risultati" che semplicemente fa apparire o sparire il bottone "Espandi la ricerca" ed il divider*/
+ .search-result-content .filters-container .filters-wrapper .filters-actions .expand-options-visible {
+  display: none;
+}
+
+.search-result-content .filters-container .filters-wrapper .filters-actions .nde-divider {
+    display: none;
+}
+
+ /*fine rendi invisibile il link a destra "Espandi opzioni di risultati" che semplicemente fa apparire o sparire il bottone "Espandi la ricerca" */
+ 
+ /*inizio prove per messaggio RA */
+ 
+/* aggiungo cursore sull'icona cliccabile del box avviso Research assistant */
+.title-with-icon a {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+/* aggiungo effetto hover sull'icona cliccabile del box avviso Research assistant */
+.title-with-icon a:hover img {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+/* aggiungo allineamento e caratteristiche immagine vicino al titolo del box avviso Research assistant */
+.title-with-icon {
+  display: flex;
+  align-items: flex-end; /*  allinea il titolo alla base dell’icona RA */
+  gap: 10px;
+}
+
+.title-with-icon a {
+  display: inline-flex;     /* ✅ FIX PRINCIPALE */
+  align-items: flex-end;
+}
+
+.title-with-icon img {
+  height: 50px;
+  width: auto;
+  border: 1px solid #003366;
+}
+
+.title-with-icon h2 {
+  margin: 0;
+  line-height: 1.2;
+  padding-bottom: 2px; /* micro-aggiustamento */
+}
+ /*fine prove per messaggio RA */
+ 
+ /*inizio configurazione per ripristinare l'ordine first name, last name nell'are apersonale dell'utente. La conf arriva dalla lista exlibris: NDE: CSS to change the order of the patron's initials */
+ .user-area .user-area-logged-in span {
+unicode-bidi: bidi-override;
+direction: rtl;
+display: inline-block !important;
+line-height: 24px;
+}
+ /*fine configurazione per ripristinare l'ordine first name, last name nell'are apersonale dell'utente. La conf arriva dalla lista exlibris: NDE: CSS to change the order of the patron's initials */
+ 
+ /* css per scritta sotto il campo owner "per le biblioteche di via Festa del Perdono.." nel form ILL */
+.custom-owner-help {
+  font-size: 1.2em;
+  color: #6b6b6b;
+  margin-top: 0px;
+  padding-top:0px;
+}

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="64" height="64" viewBox="0 0 64 64" fill="none">
+
+  <!-- OUTER ROUNDED TABLET FRAME -->
+  <rect x="3" y="8" width="58" height="48" rx="8"
+        stroke="#af0d16" stroke-width="3" fill="none"/>
+
+  <!-- POWER BUTTON (lineetta) -->
+  <rect x="10" y="26" width="3" height="12" rx="1.4"
+        fill="#af0d16"/>
+
+  <!-- HOME BUTTON (smaller & filled) -->
+  <circle cx="53" cy="32" r="3.2"
+          fill="#af0d16"/>
+
+  <!-- SHELF -->
+  <rect x="20" y="41" width="24" height="2"
+        fill="#af0d16"/>
+
+  <!-- BOOK 1 – light red, slightly taller -->
+  <rect x="21" y="24" width="6" height="16"
+        fill="#ffd2d2" stroke="#af0d16" stroke-width="1.4" rx="1"/>
+  <line x1="21.5" y1="27" x2="26.5" y2="27" stroke="#af0d16" stroke-width="0.9"/>
+  <line x1="21.5" y1="29" x2="26.5" y2="29" stroke="#af0d16" stroke-width="0.9"/>
+
+  <!-- BOOK 2 – medium red, slightly taller -->
+  <rect x="28" y="24" width="6" height="16"
+        fill="#e57a7a" stroke="#af0d16" stroke-width="1.4" rx="1"/>
+  <line x1="28.5" y1="27" x2="33.5" y2="27" stroke="#af0d16" stroke-width="0.9"/>
+  <line x1="28.5" y1="29" x2="33.5" y2="29" stroke="#af0d16" stroke-width="0.9"/>
+
+  <!-- BOOK 3 – dark red, slightly taller -->
+  <rect x="35" y="24" width="6" height="16"
+        fill="#af0d16" stroke="#af0d16" stroke-width="1.4" rx="1"/>
+  <line x1="35.5" y1="27" x2="40.5" y2="27" stroke="white" stroke-width="0.9"/>
+  <line x1="35.5" y1="29" x2="40.5" y2="29" stroke="white" stroke-width="0.9"/>
+
+</svg>

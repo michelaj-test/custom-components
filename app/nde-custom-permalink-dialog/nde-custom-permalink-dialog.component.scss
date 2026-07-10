@@ -1,0 +1,24 @@
+.dialog-conainer-custom {
+      max-width: var(--mat-dialog-container-max-width, 500px);
+      min-width: var(--mat-dialog-container-min-width, 280px);
+  }
+.permalink-container-custom {    
+  padding: 1rem;  
+  overflow-wrap: anywhere;  /* moderno, meglio di break-word */
+  word-break: break-word;   /* fallback */
+  overflow: hidden;
+  background-color: var(--lightBG) !important;
+  }
+.permalink-header{
+  display: flex;
+  justify-content: space-between; /* Spinge titolo a sinistra e bottone a destra */
+  align-items: center;
+  padding: 0px !important;
+  margin:0px;
+}
+.custom-close-button {
+  margin:0px;
+  padding:0px;
+}
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0">
+<!-- sostituisco l'immagine dei filtri con l'imbuto -->
+<symbol id="Tune" viewBox="0 0 14 14">
+	<path d="M5.90518 13.786C5.66907 13.786 5.47115 13.7061 5.31143 13.5464C5.15171 13.3867 5.07184 13.1887 5.07184 12.9526V7.95264L0.238511 1.78597C0.0301777 1.50819 -0.0010723 1.21653 0.144761 0.91097C0.290594 0.605415 0.544067 0.452637 0.905178 0.452637H12.5718C12.933 0.452637 13.1864 0.605415 13.3323 0.91097C13.4781 1.21653 13.4468 1.50819 13.2385 1.78597L8.40518 7.95264V12.9526C8.40518 13.1887 8.32532 13.3867 8.16559 13.5464C8.00587 13.7061 7.80795 13.786 7.57184 13.786H5.90518Z"/>
+</symbol>
+<!-- sostituisco l'immagine dei tre puntini ... con il + per espandere il  menu alfabeto e categorie nella versione mobile di cerca banceh dati e journal -->
+<!-- in realtà more si riferisce ai tre puntini verticali, su quelli orizzontali c'è un rotate... dalle prime prove ...viene trasformato in + mentre quelli verticali rimangono non visualizzati nè sostituiti) -->
+<!--<symbol id="more" viewBox="0 -960 960 960">
+  <path d="M0 8H16" stroke="currentColor" stroke-width="2"/>
+  <path d="M8 0V16" stroke="currentColor" stroke-width="2"/>
+</symbol>
+-->
+<!-- se volessi sostituire con il triangolino anzichè il + posso utilizzare questa ma il triangolo viene ruotato come succede per i ... per via della caratteristiche delle mat-icon. dovrei fare ulteriore modifica. 
+<symbol id="more" viewBox="0 -960 960 960">	
+<path d="M480-360 280-560h400L480-360Z"/>
+</symbol>	-->
+
+</svg> 

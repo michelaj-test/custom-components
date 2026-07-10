@@ -1,0 +1,51 @@
+@media (min-width: 960px) {
+    
+    .permalink-icon-custom {
+        /* layout */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        min-height: 40px;   /* 👈 idem */
+        flex: 0 0 40px;     /* 👈 impedisce stretching nei container flex */
+        aspect-ratio: 1 / 1;/* rete di sicurezza */
+
+        /* niente padding/border che alterano il box */
+        padding: 0;
+        border: 0;
+
+        /* forma e colore */
+        border-radius: 50%;
+        overflow: hidden;
+        color: var(--mat-sys-on-surface-variant);
+
+        /* imposta i token MDC/Material a 40px (ripple/touch layer) */
+        --mdc-icon-button-state-layer-size: 40px;
+        --mdc-icon-button-icon-size: 24px;
+    }
+
+    .permalink-label-custom {
+        display: none;
+	}
+}
+
+@media (max-width: 959.99px) {
+    .permalink-icon-custom{
+        border-radius:0% !important;
+        gap: 1rem;
+        color: var(--mat-sys-on-surface-variant);
+    }
+    .permalink-container-custom {
+        display: block;
+        background-color: rgba(0, 0, 0, 0);
+        fill: currentColor;
+        cursor: pointer;
+        user-select: none;
+        text-align: center;
+        padding-left: calc(calc(var(--mdc-icon-button-state-layer-size, 40px) - var(--mdc-icon-button-icon-size, 24px)) / 2);
+        color: var(--mdc-icon-button-icon-color, var(--mat-sys-on-surface-variant));
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+}
+
+

@@ -1,0 +1,16 @@
+<div class="flex-row action-button-container permalink-container-custom">
+<span class="mat-mdc-button-touch-target" *ngIf="isRecordContext()"> 
+  <button 
+class="mat-mdc-menu-item mat-mdc-focus-indicator mat-mdc-tooltip-trigger mat-mdc-menu-trigger action-button mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base permalink-icon-custom"
+      mat-menu-item
+      aria-label="Permalink"
+      (click)="openPermalink()"
+      [matTooltip]="tooltip">
+    <mat-icon>link</mat-icon>
+    <span class="permalink-label-custom">Permalink</span>
+    <span class="mat-focus-indicator"></span>
+    <span class="mat-mdc-button-touch-target"></span>
+    <span class="mat-ripple mat-mdc-button-ripple"></span>
+  </button>
+</span>
+</div>

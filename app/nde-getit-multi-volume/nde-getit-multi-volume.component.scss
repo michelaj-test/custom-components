@@ -1,0 +1,43 @@
+.labelMulti {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* stile per i link */
+.link-list a {
+  display: block;             /* ognuno su una riga */
+  text-decoration: none;
+  margin: 6px 6px;              /* spaziatura verticale */
+  color: var(--sys-primary);
+  display:inline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.link-row{
+    display: block;
+    unicode-bidi: isolate;
+}
+/* stile per il bottone "Mostra tutti" */
+.show-all-btn {
+  background-color: #ffffff;
+    border: 0px;
+    border-radius: 9999px;
+    padding: 12px 16px;
+    margin: 10px 0px;
+    font-weight: 600;
+    color: var(--sys-primary);
+    cursor: pointer;
+    display: var(--mat-text-button-touch-target-display, block);
+    transition: background-color 0.2s, color 0.2s;
+
+}
+.show-all-btn::after {
+  font-size: 14px;
+}
+
+.show-all-btn:hover {
+  background-color: #f3f4f6; /* grigino simile all'immagine */
+}

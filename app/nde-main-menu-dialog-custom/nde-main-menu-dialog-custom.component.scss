@@ -1,0 +1,92 @@
+.unimi-links-menu {
+  position: relative;
+  font-family: inherit;
+  padding-left: var(--mat-menu-item-leading-spacing, 12px);
+  padding-right: var(--mat-menu-item-trailing-spacing, 12px);
+  border: none;
+}
+
+/* Pulsante principale: l'area cliccabile con l'effetto ovale */
+.unimi-links-toggle {
+  background: transparent;
+  border: none;
+  display: inline-flex; // Importante: inline-flex lo rende largo quanto il contenuto
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  
+  // Padding interno all'ovale per non far toccare il testo ai bordi dell'azzurro
+  padding: 6px 16px; 
+  
+  // Spostiamo il pulsante a sinistra per compensare il padding interno 
+  // e mantenere il testo "Link utili" allineato verticalmente agli altri link
+  margin-left: -12px; 
+
+  font-size: 1rem;
+  color: #003366;
+  cursor: pointer;
+  border-radius: 20px; /* Crea la forma ovale/pillola */
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(30, 114, 191, 0.1); 
+  }
+}
+/* Etichetta (testo + icona esterna) */
+.unimi-links-label {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  gap: 4px;
+}
+
+/* Icona esterna (↗) */
+.unimi-links-external-icon {
+  width: 14px;
+  height: 14px;
+  color: currentColor;
+}
+
+/* Freccia dropdown */
+.unimi-links-arrow {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* Ruota la freccia se aperta */
+.unimi-links-arrow-up {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.unimi-links-dropdown {
+  margin-left:5px;
+}
+
+/* Lista link */
+.unimi-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #ddd;
+}
+
+/* Singolo link */
+.unimi-links-item {
+  display: block;
+  text-decoration: none;
+  color: #003366;
+  font-size: 0.8rem;
+}
+
+.unimi-links-item:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: nasconde su desktop */
+@media (min-width: 601px) {
+  .unimi-links-menu {
+    display: none;
+  }
+}

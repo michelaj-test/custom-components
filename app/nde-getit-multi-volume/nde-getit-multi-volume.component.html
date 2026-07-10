@@ -1,0 +1,30 @@
+<ng-container *ngIf="displaySection1.length > 0">
+
+  <p class="labelMulti">{{ labelMulti }}:</p>
+
+  <div class="link-list">
+    <div class="link-row" *ngFor="let item of displaySection1">
+      <span>Volume: </span><a [attr.href]="item[1]" 
+     class="hyper-text ng-star-inserted" 
+     (click)="navigateTo(item[1], $event)">
+    {{ item[0] }}
+  </a>
+    </div>
+  </div>
+  <div class="link-list" *ngIf="showAll">
+    <div class="link-row" *ngFor="let item of displaySection2">
+      <span>Volume: </span><a [attr.href]="item[1]" 
+     class="hyper-text ng-star-inserted" 
+     (click)="navigateTo(item[1], $event)">
+    {{ item[0] }}
+  </a>
+    </div> 
+  </div>
+  <!-- Bottone toggle -->
+<button *ngIf="displaySection2.length > 0"
+        (click)="toggleShowAll()" [attr.aria-expanded]="showAll" 
+        class="show-all-btn">
+ {{ (showAll ? 'fulldisplay.details.showLess' : 'fulldisplay.details.showAll') | translate }}
+      {{ showAll ? '˄' : '˅' }}
+</button>
+</ng-container>
