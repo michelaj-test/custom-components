@@ -1,5 +1,4 @@
 //IMPORTI I COMPONENTI
-//import { NdeLocationComponentComponent } from "../nde-location-component/nde-location-component.component";
 import { NdeLocationItemComponent } from "../nde-location-item/nde-location-item.component";
 import { NdePurchaseRequestCustomComponent } from "../nde-purchase-request-custom/nde-purchase-request-custom.component";
 import { NdeFormRequestCustomComponent } from "../nde-form-request-custom/nde-form-request-custom.component";
