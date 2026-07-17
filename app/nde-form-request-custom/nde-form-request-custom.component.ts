@@ -1,4 +1,5 @@
-//this component order the list of libraries in ILL form and hide citationType and physicalChooseType fields from purchase form  
+//this component remove the chooseType field and hide citationType for the Purchase Form.
+// For the ILL form, reset the library list, make it mandatory, and reorder it.
 import { Component, Input} from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
