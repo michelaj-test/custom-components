@@ -1,0 +1,27 @@
+.expand-container-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.expand-link-custom {
+    font-family: var(--mat-sys-label-large-font);
+    font-size: 1rem;
+    color: var(--sys-primary);
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 0;
+}
+.back-icon {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    vertical-align: middle;
+    margin-right: .1rem;
+}
+
+.expand-text-custom {
+    min-width: 0;
+    padding-left:0.8rem
+}

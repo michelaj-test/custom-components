@@ -1,0 +1,33 @@
+<div class="expand-container-custom">
+
+  <ng-container *ngIf="expandChecked; else collapsedView">
+
+    <span class="expand-link-custom" (click)="onExpandClick()">
+    <svg  class="back-icon"3    viewBox="0 0 32 32"4    aria-hidden="true" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+      <path d="M12.6799 24.2886L4.67993 16.2886L12.6799 8.28857L14.5466 10.2219L9.81327 14.9552H26.0133V17.6219H9.81327L14.5466 22.3552L12.6799 24.2886Z"></path>
+    </svg>
+       Torna alla ricerca in Ateneo
+    </span>
+
+    <span class="expand-text-custom">
+      Non hai ancora trovato quello che cerchi?
+      <a href="/nde/blankIll?lang=it&vid=39UMI_INST%3AVU_NDE_ELISA" class="expand-link-custom">
+      Clicca qui per inviare una richiesta
+      </a>
+    </span>
+
+  </ng-container>
+
+  <ng-template #collapsedView>
+
+    <span>
+      Non hai trovato quello che cerchi?
+
+    <span class="expand-link-custom" (click)="onExpandClick()">
+      Clicca qui per espandere la ricerca fuori Ateneo
+    </span>
+    </span>
+
+  </ng-template>
+
+</div>
