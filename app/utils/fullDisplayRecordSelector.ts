@@ -5,7 +5,6 @@ interface FullDisplayState {
   selectedRecordId: string | null;
   getItLocations?: {
     locations?: { [key: string]: any };
-    // Aggiungi questa riga:
     allExpanded?: boolean;
   };
 }
@@ -14,16 +13,6 @@ interface SearchState {
   entities: { [key: string]: any };
 }
 
-// Tipizzazione minimale, senza @ngrx/router-store
-interface CustomRouterState {
-  state?: {
-    root?: {
-      queryParams?: {
-        [key: string]: any;
-      };
-    };
-  };  
-}
 
 const selectFullDisplay = createFeatureSelector<FullDisplayState>('full-display');
 const selectSearchState = createFeatureSelector<SearchState>('Search');
@@ -31,14 +20,27 @@ const selectFullDisplayRecordId = createSelector(
   selectFullDisplay,
   (fullDisplay: FullDisplayState) => fullDisplay?.selectedRecordId ?? null
 );
+
+//nde-card-purchase-component e nde-multi-volume
 export const selectFullDisplayRecord = createSelector(
   selectFullDisplayRecordId,
   selectSearchState,
   (recordId: string | null, searchState: SearchState) => recordId ? searchState.entities[recordId] : null
 );
+//per espandere la location quando non ci sono richieste nella sezione getit (nde-request-services)
+export const selectServiceInfo = createSelector(
+  selectFullDisplay,
+  (state: any) => state?.serviceInfo
+);
+export const selectUserState = createFeatureSelector<any>('user');
+
+export const selectIsLoggedIn = createSelector(
+  selectUserState,
+  (state) => state?.isLoggedIn ?? false
+);
 
 
-// Selettore per URL
+// Selettore per URL (nde-record-action-permalink)
 export const selectRouterUrl = (state: any): string =>
   state?.router?.state?.url ?? '';
 
@@ -46,18 +48,8 @@ export const selectRouterUrl = (state: any): string =>
 export const selectQueryParams = (state: any) =>
   state.router?.state?.root?.queryParams ?? {};
 
-export const selectIsAllExpanded = createSelector(
-  selectFullDisplay,
-  (state: any) => {
-    // Esaminiamo getItLocations che abbiamo visto nell'immagine di Redux
-    // Se allExpanded è sempre false, cerchiamo una chiave specifica per gli item
-    return state.getItLocations?.['allItemsExpanded'] ?? 
-           state.getItLocations?.['allExpanded'] ?? 
-           false;
-  }
-);
 
-// 1. Puntiamo alla feature Delivery
+// 1. Puntiamo alla feature Delivery (per nde-location-item)
 export const selectDeliveryState = createFeatureSelector<any>('Delivery');
 
 // 2. Puntiamo alle entities del Delivery
