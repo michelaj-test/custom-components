@@ -7,12 +7,12 @@ import { NdeRequestCardPurchaseComponent } from "../nde-request-card-purchase/nd
 import { NdeMainMenuDialogCustomComponent } from "../nde-main-menu-dialog-custom/nde-main-menu-dialog-custom.component";
 import { NdeRecordActionsPermalinkComponent } from "../nde-record-actions-permalink/nde-record-actions-permalink.component";
 import { NdeExpandOptionCustomComponent } from "../nde-expand-option-custom/nde-expand-option-custom.component";
-import { NdeRequestServicesComponent } from '../nde-request-services/nde-request-services.component';
+import { NdeLocationExpandComponent } from '../nde-location-expand/nde-location-expand.component';
 
 // Define the map, attivo i componenti
 export const selectorComponentMap = new Map<string, any>([
     //Expand locations if any request button is not present when users are logged in:
-    ['nde-location-after', NdeRequestServicesComponent],
+    ['nde-location-after', NdeLocationExpandComponent],
     //sostituisce il "location item" mettendo non disponibile quando nella location è scritto non disponibile:
     ['nde-location-item-bottom', NdeLocationItemComponent],
     //elimina alcune voci dalla lista biblioteche del form acquisti e le riordina:
