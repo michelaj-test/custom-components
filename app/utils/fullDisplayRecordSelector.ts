@@ -27,7 +27,7 @@ export const selectFullDisplayRecord = createSelector(
   selectSearchState,
   (recordId: string | null, searchState: SearchState) => recordId ? searchState.entities[recordId] : null
 );
-//per espandere la location quando non ci sono richieste nella sezione getit (nde-request-services)
+//per espandere la location quando non ci sono richieste nella sezione getit (nde-location-expand)
 export const selectServiceInfo = createSelector(
   selectFullDisplay,
   (state: any) => state?.serviceInfo
