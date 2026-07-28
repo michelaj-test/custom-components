@@ -1,29 +1,53 @@
 .expand-container-custom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: #c7dbfe;
-    color: var(--sys-scrim);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.6rem; // spazio tra blocco sinistro e destro
+  width: 100%;
+  background-color: #c7dbfe;
+  color: var(--sys-scrim);
+}
+
+.expand-area-custom {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  column-gap: 0.4rem;
+  align-items: start;
+  font-family: var(--mat-sys-label-large-font);
+  font-size: 1rem;
+  color: var(--sys-primary);
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .expand-link-custom {
-    font-family: var(--mat-sys-label-large-font);
-    font-size: 1rem;
-    color: var(--sys-primary);
-    font-weight: 600;
-    cursor: pointer;
-    min-width: 0;
+  font-family: var(--mat-sys-label-large-font);
+  font-size: 1rem;
+  color: var(--sys-primary);
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 0;
 }
-.back-icon {
-    width: 22px;
-    height: 22px;
-    fill: currentColor;
-    vertical-align: middle;
-    margin-right: .1rem;
+
+.back-icon-custom {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  flex-shrink: 0;
+  margin-right: 0.4rem;
+}
+
+.back-text {
+  min-width: 0;
 }
 
 .expand-text-custom {
-    min-width: 0;
-    padding-left:0.8rem
+  min-width: 0;
+}
+
+@media (max-width: 815px) {
+  .expand-container-custom {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 }
